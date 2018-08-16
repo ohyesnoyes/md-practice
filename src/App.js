@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Container } from 'mdbreact';
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Container } from 'mdbreact';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './Home';
 import Social from './Social';
 import Music from './Music';
-import Gallery from './Gallery';
+import GalleryPage from './GalleryPage';
 import Contact from './Contact';
 
 import 'font-awesome/css/font-awesome.min.css';
@@ -84,7 +84,7 @@ class App extends Component {
                   <Route exact path="/" component={Home}/>
                   <Route path="/social" component={Social}/>
                   <Route path="/music" component={Music}/>
-                  <Route path="/gallery" component={Gallery}/>
+                  <Route path="/gallery" component={GalleryPage}/>
                   <Route path="/contact" component={Contact}/>
                 </Container>
               </div>
