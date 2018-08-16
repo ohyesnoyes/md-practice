@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Container } from 'mdbreact';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './Home';
@@ -36,11 +36,23 @@ class App extends Component {
         });
     }
 
+    // <NavItem>
+    //     <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+    //     <DropdownToggle nav caret>Gallery</DropdownToggle>
+    //     <DropdownMenu>
+    //         <DropdownItem href="/gallery">Folder 1</DropdownItem>
+    //         <DropdownItem href="/gallery/folder2">Folder 2</DropdownItem>
+    //         <DropdownItem href="/gallery/folder3">Folder 3</DropdownItem>
+    //         <DropdownItem href="/gallery/folder4">Folder 4</DropdownItem>
+    //     </DropdownMenu>
+    //     </Dropdown>
+    // </NavItem>
+
     render() {
         return (
             <Router>
               <div className="container-fluid">
-                  <Navbar color="blue" dark expand="md" scrolling>
+                  <Navbar color="cyan" dark expand="md" scrolling>
                       <NavbarBrand>
                           <strong>MySite</strong>
                       </NavbarBrand>
@@ -57,15 +69,7 @@ class App extends Component {
                                 <NavLink to="/music">Music</NavLink>
                             </NavItem>
                             <NavItem>
-                                <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                                <DropdownToggle nav caret>Gallery</DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem href="/gallery">Folder 1</DropdownItem>
-                                    <DropdownItem href="/gallery/folder2">Folder 2</DropdownItem>
-                                    <DropdownItem href="/gallery/folder3">Folder 3</DropdownItem>
-                                    <DropdownItem href="/gallery/folder4">Folder 4</DropdownItem>
-                                </DropdownMenu>
-                                </Dropdown>
+                                <NavLink to="/gallery">Gallery</NavLink>
                             </NavItem>
                           </NavbarNav>
                           <NavbarNav right>
@@ -76,13 +80,13 @@ class App extends Component {
                       </Collapse>
                   </Navbar>
                 
-                <div>
+                <Container>
                   <Route exact path="/" component={Home}/>
                   <Route path="/social" component={Social}/>
                   <Route path="/music" component={Music}/>
                   <Route path="/gallery" component={Gallery}/>
                   <Route path="/contact" component={Contact}/>
-                </div>
+                </Container>
               </div>
             </Router>
         );
