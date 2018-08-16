@@ -48,6 +48,35 @@ class App extends Component {
     //     </Dropdown>
     // </NavItem>
 
+    // enableCookiesRender(){
+    //    return(
+    //     <div>
+    //         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modalCookie">Cookies</button>
+
+            
+    //         <div className="modal fade top" id="modalCookie" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+    //             data-backdrop="false">
+    //             <div className="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+                   
+    //                 <div className="modal-content">
+                       
+    //                     <div className="modal-body">
+    //                         <div className="row d-flex justify-content-center align-items-center">
+
+    //                             <p className="pt-3 pr-2">We use cookies to improve your website experience</p>
+
+    //                             <a type="button" className="btn btn-primary">Learn more <i className="fa fa-book ml-1"></i></a>
+    //                             <a type="button" className="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+                    
+    //             </div>
+    //         </div>
+    //     </div>
+    //    );
+    // }
+
     render() {
         return (
             <Router>
@@ -87,6 +116,9 @@ class App extends Component {
                   <Route path="/gallery" component={GalleryPage}/>
                   <Route path="/contact" component={Contact}/>
                 </Container>
+
+                
+
               </div>
             </Router>
         );
